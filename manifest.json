@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Gag-O-Meter",
+  "version": "0.0.0",
+  "author": "Konrad Klockgether",
+  "description": "Track wasted time and scrolled distance on 9GAG",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "minimum_chrome_version": "62",
+  "permissions": [
+    "storage",
+    "http://*.9gag.com/",
+    "https://*.9gag.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://9gag.com/*",
+        "https://9gag.com/*"
+      ],
+      "js": [
+        "./dist/content_scripts.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gag-O-Meter</title>
+  <script src="../dist/popup.js"></script>
+  <link rel="stylesheet" href="../dist/popup.css">
+</head>
+<body>
+
+<header>
+  <h1>Gag-O-Meter</h1>
+</header>
+
+<section id="info">
+  See how much time you wasted and the distance 9GAG travels on your screen.
+  <p id="data">
+    Wasted time: <label id="time"></label> <label id="time-unit"></label>
+    <br>
+    Scrolled distance: <label id="distance"></label> <label id="distance-unit"></label>
+  </p>
+</section>
+
+<section id="settings">
+  <h2>Settings</h2>
+  <ul class="content">
+    <li>Monitor size in inch: <input type="number" id="setting-monitor-size" value="24" maxlength="2"></li>
+    <li>System of distance units <select id="setting-unit-distance">
+      <option value="metric">Metric</option>
+      <option value="imperial">Imperial</option>
+      <option value="fun" disabled>Funny Stuff</option>
+    </select>
+    </li>
+    <li>
+      System of time units <select id="setting-unit-time">
+      <option value="normal">Normal</option>
+      <option value="fun" disabled>Funny Stuff</option>
+    </select>
+    </li>
+  </ul>
+</section>
+
+<section id="contribution">
+  <h2>Contribute</h2>
+  Checkout the Project on GitHub, make a fork and contribute new features, fixes or do improvements to existing stuff!
+  We all will appreciate what you do for a better internet :)
+</section>
+
+</body>
+</html>
